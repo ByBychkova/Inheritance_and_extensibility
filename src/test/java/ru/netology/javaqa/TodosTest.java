@@ -1,4 +1,5 @@
 package ru.netology.javaqa;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -42,7 +43,7 @@ class TodosTest {
                 "Приложение НетоБанка",
                 "Во вторник после обеда"
         );
-        Todos todos= new Todos();
+        Todos todos = new Todos();
         todos.add(simpleTask);
         todos.add(epic);
         todos.add(meeting);
@@ -66,7 +67,7 @@ class TodosTest {
                 "Приложение НетоБанка",
                 "Во вторник после обеда"
         );
-        Todos todos= new Todos();
+        Todos todos = new Todos();
         todos.add(simpleTask);
         todos.add(epic);
         todos.add(meeting);
@@ -76,6 +77,7 @@ class TodosTest {
         Task[] actual = todos.search("Написать код");
         Assertions.assertArrayEquals(expected, actual);
     }
+
     @Test
     public void taskSearch3() {
         SimpleTask simpleTask = new SimpleTask(5, "Заказать Яйца");
@@ -89,7 +91,7 @@ class TodosTest {
                 "Приложение НетоБанка",
                 "Во вторник после обеда"
         );
-        Todos todos= new Todos();
+        Todos todos = new Todos();
         todos.add(simpleTask);
         todos.add(epic);
         todos.add(meeting);
@@ -113,12 +115,12 @@ class TodosTest {
                 "Приложение НетоБанка",
                 "Во вторник после обеда"
         );
-        Todos todos= new Todos();
+        Todos todos = new Todos();
         todos.add(simpleTask);
         todos.add(epic);
         todos.add(meeting);
 
-        Task[] expected = {simpleTask,epic, meeting};
+        Task[] expected = {simpleTask, epic, meeting};
         Task[] actual = todos.search("");
         Assertions.assertArrayEquals(expected, actual);
 
